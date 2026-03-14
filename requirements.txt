@@ -1,1 +1,5 @@
-# Add project dependencies here
+torch
+transformers
+datasets
+fastapi
+uvicorn

@@ -1,11 +1,15 @@
-from app.chatbot import chat
+from fastapi import FastAPI
+from app.chatbot import generate_response
+
+app = FastAPI()
 
 
-def main() -> None:
-    print("MindSpark chatbot backend is ready.")
-    user_input = input("You: ")
-    print(f"Bot: {chat(user_input)}")
+@app.get("/")
+def home():
+    return {"message": "MindSpark Chatbot API running"}
 
 
-if __name__ == "__main__":
-    main()
+@app.post("/chat")
+def chat(message: str):
+    reply = generate_response(message)
+    return {"response": reply}

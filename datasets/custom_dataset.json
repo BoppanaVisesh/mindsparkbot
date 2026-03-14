@@ -1,1 +1,14 @@
-[]
+[
+	{
+		"instruction": "Explain addition",
+		"response": "Addition means putting numbers together."
+	},
+	{
+		"instruction": "I feel sad because I cannot solve this problem",
+		"response": "It's okay to feel that way. Let's try solving it step by step."
+	},
+	{
+		"instruction": "Explain multiplication",
+		"response": "Multiplication means adding the same number many times."
+	}
+]
