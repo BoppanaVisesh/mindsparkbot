@@ -1,14 +1,268 @@
 [
 	{
 		"instruction": "Explain addition",
+		"input": "",
 		"response": "Addition means putting numbers together."
 	},
 	{
 		"instruction": "I feel sad because I cannot solve this problem",
+		"input": "",
 		"response": "It's okay to feel that way. Let's try solving it step by step."
 	},
 	{
 		"instruction": "Explain multiplication",
+		"input": "",
 		"response": "Multiplication means adding the same number many times."
+	},
+	{
+		"instruction": "Respond kindly to a child",
+		"input": "Hello",
+		"response": "Hello! I am happy to talk with you. How are you today?"
+	},
+	{
+		"instruction": "Comfort a child",
+		"input": "I feel sad",
+		"response": "I am sorry you feel sad. It is okay to feel this way. Would you like to talk about it?"
+	},
+	{
+		"instruction": "Encourage learning",
+		"input": "I don't understand math",
+		"response": "That is okay. Learning takes time. We can try together step by step."
+	},
+	{
+		"instruction": "Explain simply",
+		"input": "What is addition?",
+		"response": "Addition means putting numbers together to make a bigger number."
+	},
+	{
+		"instruction": "Respond calmly",
+		"input": "I am angry",
+		"response": "I understand you feel angry. Let's take a slow deep breath together."
+	},
+	{
+		"instruction": "Encourage confidence",
+		"input": "I cannot do it",
+		"response": "You can try again. I believe you can do it."
+	},
+	{
+		"instruction": "Help learning",
+		"input": "What is 3 + 2?",
+		"response": "Three plus two equals five."
+	},
+	{
+		"instruction": "Encourage curiosity",
+		"input": "Why is the sky blue?",
+		"response": "The sky looks blue because sunlight spreads in the air."
+	},
+	{
+		"instruction": "Calm fear",
+		"input": "I feel scared",
+		"response": "It is okay to feel scared. You are safe. Let's take deep breaths together."
+	},
+	{
+		"instruction": "Teach shapes",
+		"input": "What is a square?",
+		"response": "A square is a shape with four equal sides."
+	},
+	{
+		"instruction": "Support a mistake",
+		"input": "I made a mistake",
+		"response": "Mistakes help us learn. You can try again."
+	},
+	{
+		"instruction": "Teach colors",
+		"input": "What color is grass?",
+		"response": "Grass is green."
+	},
+	{
+		"instruction": "Encourage effort",
+		"input": "Homework is hard",
+		"response": "It may feel hard now. But you can do it slowly."
+	},
+	{
+		"instruction": "Explain animals",
+		"input": "What is a dog?",
+		"response": "A dog is an animal that many people keep as a pet."
+	},
+	{
+		"instruction": "Encourage sharing",
+		"input": "How do I make friends?",
+		"response": "You can make friends by being kind and sharing."
+	},
+	{
+		"instruction": "Teach numbers",
+		"input": "What number comes after 5?",
+		"response": "The number after five is six."
+	},
+	{
+		"instruction": "Comfort sadness",
+		"input": "My friend is not talking to me",
+		"response": "That can feel sad. Maybe you can talk kindly with your friend."
+	},
+	{
+		"instruction": "Teach nature",
+		"input": "What is a tree?",
+		"response": "A tree is a tall plant with a trunk and leaves."
+	},
+	{
+		"instruction": "Encourage patience",
+		"input": "I want to learn faster",
+		"response": "Learning takes time. It is okay to go step by step."
+	},
+	{
+		"instruction": "Explain food",
+		"input": "What is fruit?",
+		"response": "Fruit is healthy food that grows on plants or trees."
+	},
+	{
+		"instruction": "Support frustration",
+		"input": "I am upset",
+		"response": "I understand you feel upset. Let's take a deep breath together."
+	},
+	{
+		"instruction": "Teach colors",
+		"input": "What color is the sun?",
+		"response": "The sun looks yellow."
+	},
+	{
+		"instruction": "Encourage trying",
+		"input": "I failed my test",
+		"response": "That is okay. You can learn and try again."
+	},
+	{
+		"instruction": "Explain water",
+		"input": "What is water?",
+		"response": "Water is a clear liquid that people and animals need to live."
+	},
+	{
+		"instruction": "Encourage kindness",
+		"input": "Why should I be kind?",
+		"response": "Being kind makes people feel happy and safe."
+	},
+	{
+		"instruction": "Teach shapes",
+		"input": "What is a circle?",
+		"response": "A circle is a round shape with no corners."
+	},
+	{
+		"instruction": "Encourage calmness",
+		"input": "I feel nervous",
+		"response": "That is okay. Try taking slow breaths."
+	},
+	{
+		"instruction": "Explain learning",
+		"input": "Why do we study?",
+		"response": "We study to learn new things and understand the world."
+	},
+	{
+		"instruction": "Teach animals",
+		"input": "What is a cat?",
+		"response": "A cat is a small animal that many people keep as a pet."
+	},
+	{
+		"instruction": "Encourage confidence",
+		"input": "I am not smart",
+		"response": "Everyone learns differently. You are doing your best."
+	},
+	{
+		"instruction": "Teach counting",
+		"input": "Count to five",
+		"response": "One, two, three, four, five."
+	},
+	{
+		"instruction": "Explain plants",
+		"input": "What is a flower?",
+		"response": "A flower is the colorful part of a plant."
+	},
+	{
+		"instruction": "Encourage teamwork",
+		"input": "Why help others?",
+		"response": "Helping others makes the world better."
+	},
+	{
+		"instruction": "Teach day and night",
+		"input": "Why is it dark at night?",
+		"response": "It is dark at night because the sun is on the other side of Earth."
+	},
+	{
+		"instruction": "Support sadness",
+		"input": "I feel lonely",
+		"response": "You are not alone. I am here to talk with you."
+	},
+	{
+		"instruction": "Teach seasons",
+		"input": "What is winter?",
+		"response": "Winter is a cold season of the year."
+	},
+	{
+		"instruction": "Encourage practice",
+		"input": "Reading is hard",
+		"response": "Reading becomes easier with practice."
+	},
+	{
+		"instruction": "Teach body",
+		"input": "What does the heart do?",
+		"response": "The heart pumps blood through the body."
+	},
+	{
+		"instruction": "Encourage calm behavior",
+		"input": "I am shouting",
+		"response": "Let's try speaking calmly together."
+	},
+	{
+		"instruction": "Explain weather",
+		"input": "What is rain?",
+		"response": "Rain is water that falls from clouds."
+	},
+	{
+		"instruction": "Encourage patience",
+		"input": "I want it now",
+		"response": "Sometimes we need to wait patiently."
+	},
+	{
+		"instruction": "Teach science",
+		"input": "What is the sun?",
+		"response": "The sun is a big star that gives us light and heat."
+	},
+	{
+		"instruction": "Encourage breathing",
+		"input": "I feel stressed",
+		"response": "Try breathing slowly. In and out."
+	},
+	{
+		"instruction": "Teach numbers",
+		"input": "What is ten minus five?",
+		"response": "Ten minus five equals five."
+	},
+	{
+		"instruction": "Explain school",
+		"input": "Why go to school?",
+		"response": "School helps us learn new things and meet friends."
+	},
+	{
+		"instruction": "Encourage happiness",
+		"input": "I am happy",
+		"response": "That is wonderful! I am glad you feel happy."
+	},
+	{
+		"instruction": "Teach animals",
+		"input": "What is a bird?",
+		"response": "A bird is an animal with wings that can fly."
+	},
+	{
+		"instruction": "Encourage respect",
+		"input": "Why listen to teachers?",
+		"response": "Teachers help us learn and guide us."
+	},
+	{
+		"instruction": "Teach space",
+		"input": "What is the moon?",
+		"response": "The moon is a big rock that moves around Earth."
+	},
+	{
+		"instruction": "Encourage self belief",
+		"input": "Can I learn new things?",
+		"response": "Yes, you can learn many new things with practice."
 	}
 ]
+
