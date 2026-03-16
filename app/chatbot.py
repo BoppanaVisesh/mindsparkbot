@@ -26,6 +26,8 @@ def generate_response(user_input):
         top_p=0.9,
     )
 
-    response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    decoded = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    if "Assistant:" in decoded:
+        return decoded.split("Assistant:", 1)[1].strip()
 
-    return response
+    return decoded
