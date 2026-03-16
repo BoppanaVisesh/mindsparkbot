@@ -8,26 +8,27 @@ from datasets import Dataset, load_dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM, Trainer, TrainingArguments
 import torch
 
-MODEL_NAME = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
+MODEL_NAME = "Qwen/Qwen2.5-0.5B-Instruct"
 LOCAL_DATASET_PATH = PROJECT_ROOT / "datasets" / "custom_dataset.json"
 OUTPUT_MODEL_DIR = PROJECT_ROOT / "models" / "mindspark_model"
+TOKEN_MAX_LENGTH = 128
 
 # Keep training size manageable while still mixing all sources.
 DEFAULT_MAX_SAMPLES = {
-    "custom": 5000,
-    "empathetic_dialogues": 4000,
-    "daily_dialog": 4000,
-    "eli5": 4000,
-    "go_emotions": 4000,
+    "custom": 400,
+    "empathetic_dialogues": 400,
+    "daily_dialog": 400,
+    "eli5": 400,
+    "go_emotions": 400,
 }
 
 FAST_MAX_SAMPLES = {
-    "custom": 1000,
-    "empathetic_dialogues": 1000,
-    "daily_dialog": 1000,
+    "custom": 250,
+    "empathetic_dialogues": 250,
+    "daily_dialog": 250,
     "eli5": 0,
-    "go_emotions": 1000,
+    "go_emotions": 250,
 }
 
 EMOTION_LABELS = [
@@ -277,6 +278,7 @@ def parse_args():
     parser.add_argument("--fast", action="store_true", help="Use a smaller, faster dataset mix (skips ELI5).")
     parser.add_argument("--skip-eli5", action="store_true", help="Skip ELI5 even in full mode.")
     parser.add_argument("--epochs", type=int, default=1, help="Number of training epochs.")
+    parser.add_argument("--resume_from_checkpoint", type=str, default=None, help="Path to a checkpoint folder to resume training from.")
     return parser.parse_args()
 
 
@@ -311,7 +313,7 @@ def main():
             f"Input: {example['input']}\n"
             f"Response: {example['response']}"
         )
-        tokenized = tokenizer(text, truncation=True, padding="max_length", max_length=256)
+        tokenized = tokenizer(text, truncation=True, padding="max_length", max_length=TOKEN_MAX_LENGTH)
         tokenized["labels"] = tokenized["input_ids"].copy()
         return tokenized
 
@@ -319,7 +321,14 @@ def main():
 
     training_args = TrainingArguments(
         output_dir=str(OUTPUT_MODEL_DIR),
-        per_device_train_batch_size=1,
+        per_device_train_batch_size=8,
+        gradient_accumulation_steps=1,
+        learning_rate=2e-5,
+        logging_steps=10,
+        save_steps=10,
+        save_total_limit=2,
+        dataloader_num_workers=2,
+        dataloader_pin_memory=False,
         num_train_epochs=args.epochs,
     )
 
@@ -329,7 +338,7 @@ def main():
         train_dataset=tokenized_dataset,
     )
 
-    trainer.train()
+    trainer.train(resume_from_checkpoint=args.resume_from_checkpoint)
 
     model.save_pretrained(OUTPUT_MODEL_DIR)
     tokenizer.save_pretrained(OUTPUT_MODEL_DIR)

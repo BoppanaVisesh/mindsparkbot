@@ -1,6 +1,7 @@
-torch
-transformers
-datasets
-fastapi
-uvicorn
-accelerate
+torch>=2.2,<3
+transformers>=4.46,<5
+datasets>=4.7,<5
+protobuf>=5,<7
+fastapi>=0.110,<1
+uvicorn>=0.30,<1
+accelerate>=0.30,<2
